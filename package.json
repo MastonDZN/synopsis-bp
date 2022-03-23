@@ -1,5 +1,5 @@
 {
-    "name": "synopsis-boilerplate",
+    "name": "synopsis-bp",
     "version": "0.0.0",
     "type": "module",
     "engines": {
@@ -9,6 +9,13 @@
         "email": "MastonDZN@users.noreply.github.com",
         "name": "MastonDZN",
         "url": "https://github.com/MastonDZN"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MastonDZN/synopsis-bp"
+    },
+    "bugs": {
+        "url": "https://github.com/MastonDZN/synopsis-bp/issues"
     },
     "license": "MIT",
     "devDependencies": {
