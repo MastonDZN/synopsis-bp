@@ -41,7 +41,11 @@
             "label": "yarn: test",
             "type": "shell",
             "command": "yarn run test",
-            "problemMatcher": []
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
         },
         {
             "label": "yarn: coverage",
