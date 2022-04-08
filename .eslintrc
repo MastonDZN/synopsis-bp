@@ -10,20 +10,34 @@
         "sourceType": "module",
         "ecmaVersion": 2022
     },
-    "plugins": ["@typescript-eslint", "jest"],
+    "plugins": [
+        "@typescript-eslint",
+        "jest",
+        "sort-keys-fix",
+        "simple-import-sort"
+    ],
     "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:node/recommended",
         "plugin:jest/recommended",
         "airbnb-base",
         "airbnb-typescript/base",
         "prettier"
     ],
-    "settings": {},
+    "settings": {
+        "@typescript-eslint/consistent-type-imports": {
+            "prefer": "type-imports",
+            "disallowTypeAnnotations": true
+        }
+    },
     "rules": {
         "no-console": "off",
-        "no-restricted-syntax": "off"
+        "no-restricted-syntax": "off",
+        "@typescript-eslint/lines-between-class-members": "off",
+        "@typescript-eslint/consistent-type-imports": "warn",
+        "simple-import-sort/imports": "warn",
+        "simple-import-sort/exports": "warn",
+        "sort-keys-fix/sort-keys-fix": "warn"
     }
 }

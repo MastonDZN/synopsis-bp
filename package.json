@@ -30,7 +30,8 @@
         "eslint-config-prettier": "^8.5.0",
         "eslint-plugin-import": "^2.25.4",
         "eslint-plugin-jest": "^26.1.2",
-        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-simple-import-sort": "^7.0.0",
+        "eslint-plugin-sort-keys-fix": "^1.1.2",
         "jest": "^27.5.1",
         "nodemon": "^2.0.15",
         "prettier": "^2.6.0",
@@ -45,7 +46,8 @@
         "start": "node --experimental-specifier-resolution=node --loader ts-node/esm --no-warnings src/main.ts",
         "start:r": "nodemon --watch './**/*.ts' --exec 'node --experimental-specifier-resolution=node --loader ts-node/esm --no-warnings' src/main.ts",
         "start:prod": "node ./build/src/main.js",
-        "playground": "ts-node-dev ./src/playground/playground.ts",
+        "playground": "node --experimental-specifier-resolution=node --loader ts-node/esm --no-warnings src/playground/playground.ts",
+        "playground:r": "nodemon --watch './**/*.ts' --exec 'node --experimental-specifier-resolution=node --loader ts-node/esm --no-warnings' src/playground/playground.ts",
         "build": "tsc -p tsconfig.json",
         "test": "jest --verbose --watchAll",
         "coverage": "jest --coverage",
@@ -57,8 +59,5 @@
         "clean": "rimraf coverage build tmp",
         "build:watch": "tsc -w -p tsconfig.json",
         "test:watch": "jest --watch"
-    },
-    "volta": {
-        "node": "16.13.0"
     }
 }
