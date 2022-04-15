@@ -24,7 +24,13 @@
         {
             "label": "yarn: playground",
             "type": "shell",
-            "command": "yarn run build",
+            "command": "yarn run playground",
+            "problemMatcher": []
+        },
+        {
+            "label": "yarn: playground respawn",
+            "type": "shell",
+            "command": "yarn run playground:r",
             "problemMatcher": []
         },
         {

@@ -61,6 +61,7 @@
         "lint:fix": "yarn lint --fix",
         "format": "prettier --list-different ./**/*.{js,jsx,ts,tsx,json,md,yaml}",
         "format:fix": "prettier --write ./**/*.{js,jsx,ts,tsx,json,md,yaml}",
+        "spelling": "cspell --config=.cspell.json **/*.{js,jsx,ts,tsx,md}",
         "clean": "rimraf coverage build tmp"
     }
 }
