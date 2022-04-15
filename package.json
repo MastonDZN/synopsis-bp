@@ -53,15 +53,15 @@
         "playground": "node --experimental-specifier-resolution=node --loader ts-node/esm --no-warnings src/playground/playground.ts",
         "playground:r": "nodemon --watch './**/*.ts' --exec 'node --experimental-specifier-resolution=node --loader ts-node/esm --no-warnings' src/playground/playground.ts",
         "build": "tsc -p tsconfig.json",
-        "test": "jest --verbose --watchAll",
+        "build:watch": "tsc -w -p tsconfig.json",
+        "test": "jest --verbose",
+        "test:watch": "jest --watch",
         "coverage": "jest --coverage",
         "typecheck": "tsc --noEmit",
         "lint": "eslint . --ext .ts --format=pretty",
         "lint:fix": "yarn lint --fix",
         "format": "prettier --list-different ./**/*.{js,jsx,ts,tsx,json,md,yaml}",
         "format:fix": "prettier --write ./**/*.{js,jsx,ts,tsx,json,md,yaml}",
-        "clean": "rimraf coverage build tmp",
-        "build:watch": "tsc -w -p tsconfig.json",
-        "test:watch": "jest --watch"
+        "clean": "rimraf coverage build tmp"
     }
 }
