@@ -20,8 +20,6 @@ module.exports = {
         'unicorn',
     ],
     extends: [
-        'airbnb-base',
-        'airbnb-typescript/base',
         'eslint:recommended',
         'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
