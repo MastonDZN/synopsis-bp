@@ -17,6 +17,14 @@
     "bugs": {
         "url": "https://github.com/MastonDZN/synopsis-bp/issues"
     },
+    "keywords": [
+        "template",
+        "boilerplate",
+        "node",
+        "typescript",
+        "jest",
+        "prettier"
+    ],
     "license": "Apache-2.0",
     "devDependencies": {
         "@types/jest": "^27.4.1",
