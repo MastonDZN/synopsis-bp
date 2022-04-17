@@ -4,17 +4,6 @@ module.exports = {
         es6: true,
         node: true,
     },
-    extends: [
-        'eslint:recommended',
-        'plugin:@typescript-eslint/eslint-recommended',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:@typescript-eslint/recommended-requiring-type-checking',
-        'plugin:eslint-comments/recommended',
-        'plugin:promise/recommended',
-        'plugin:unicorn/recommended',
-        'plugin:jest/recommended',
-        'prettier',
-    ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaVersion: 2021,
@@ -28,6 +17,17 @@ module.exports = {
         'simple-import-sort',
         'promise',
         'unicorn',
+    ],
+    extends: [
+        'eslint:recommended',
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+        'plugin:eslint-comments/recommended',
+        'plugin:promise/recommended',
+        'plugin:unicorn/recommended',
+        'plugin:jest/recommended',
+        'prettier',
     ],
     rules: {
         // sorting imports and object keys
