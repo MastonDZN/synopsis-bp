@@ -1,7 +1,6 @@
 {
     "name": "synopsis-bp",
     "version": "0.0.0",
-    "type": "module",
     "engines": {
         "node": ">= 16.13 <17"
     },
@@ -17,6 +16,14 @@
     "bugs": {
         "url": "https://github.com/MastonDZN/synopsis-bp/issues"
     },
+    "keywords": [
+        "template",
+        "boilerplate",
+        "node",
+        "typescript",
+        "jest",
+        "prettier"
+    ],
     "license": "Apache-2.0",
     "devDependencies": {
         "@types/jest": "^27.4.1",
@@ -37,20 +44,20 @@
         "eslint-plugin-sort-keys-fix": "^1.1.2",
         "eslint-plugin-unicorn": "40.0.0",
         "jest": "^27.5.1",
-        "nodemon": "^2.0.15",
         "prettier": "^2.6.0",
         "rimraf": "^3.0.2",
         "source-map-support": "^0.5.21",
         "ts-jest": "^27.1.3",
         "ts-node": "^10.7.0",
-        "typescript": "^4.6.2"
+        "ts-node-dev": "^1.1.8",
+        "typescript": "^4.6.3"
     },
     "scripts": {
-        "start": "node --experimental-specifier-resolution=node --loader ts-node/esm --no-warnings src/main.ts",
-        "start:r": "nodemon --watch './**/*.ts' --exec 'node --experimental-specifier-resolution=node --loader ts-node/esm --no-warnings' src/main.ts",
+        "start": "ts-node-dev src/main.ts",
         "start:prod": "node ./build/src/main.js",
-        "playground": "node --experimental-specifier-resolution=node --loader ts-node/esm --no-warnings src/playground/playground.ts",
-        "playground:r": "nodemon --watch './**/*.ts' --exec 'node --experimental-specifier-resolution=node --loader ts-node/esm --no-warnings' src/playground/playground.ts",
+        "start:r": "ts-node-dev --respawn src/main.ts",
+        "playground": "ts-node-dev src/playground/playground.ts",
+        "playground:r": "ts-node-dev --respawn src/playground/playground.ts",
         "build": "tsc -p tsconfig.json",
         "build:watch": "tsc -w -p tsconfig.json",
         "test": "jest --verbose",
@@ -61,7 +68,7 @@
         "lint:fix": "yarn lint --fix",
         "format": "prettier --list-different ./**/*.{js,jsx,ts,tsx,json,md,yaml}",
         "format:fix": "prettier --write ./**/*.{js,jsx,ts,tsx,json,md,yaml}",
-        "spelling": "cspell --config=.cspell.json **/*.{js,jsx,ts,tsx,md}",
+        "spelling": "cspell **/*.{js,jsx,ts,tsx,md,json}",
         "clean": "rimraf coverage build tmp"
     }
 }
