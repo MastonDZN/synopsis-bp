@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import('@types/prettier').Config} */
+const config = {
     overrides: [
         {
             files: '*.ts',
@@ -12,3 +13,5 @@ module.exports = {
     trailingComma: 'all',
     useTabs: false,
 };
+
+module.exports = config;
