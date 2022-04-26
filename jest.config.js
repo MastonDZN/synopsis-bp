@@ -5,7 +5,7 @@ const config = {
     transform: {
         '^.+\\.ts$': 'ts-jest',
     },
-    testRegex: '(/tests/.*|(\\.|/)(test|spec))\\.ts$',
+    testRegex: '((?<!build)/tests/.*|(.|/)(test|spec)).ts$',
     coverageDirectory: 'coverage',
     collectCoverageFrom: ['src/**/*.ts', '!src/**/*.d.ts'],
 };
