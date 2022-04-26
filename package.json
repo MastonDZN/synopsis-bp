@@ -53,15 +53,15 @@
         "typescript": "^4.6.3"
     },
     "scripts": {
-        "start": "ts-node-dev src/main.ts",
+        "start": "ts-node src/main.ts",
         "start:prod": "node ./build/src/main.js",
         "start:r": "ts-node-dev --respawn src/main.ts",
-        "playground": "ts-node-dev src/playground/playground.ts",
-        "playground:r": "ts-node-dev --respawn src/playground/playground.ts",
-        "build": "tsc -p tsconfig.json",
-        "build:watch": "tsc -w -p tsconfig.json",
+        "playground": "ts-node playground/playground.ts",
+        "playground:r": "ts-node-dev --respawn playground/playground.ts",
+        "build": "tsc",
+        "build:watch": "tsc -w",
         "test": "jest --verbose",
-        "test:watch": "jest --watch",
+        "test:watch": "yarn test --watch",
         "coverage": "jest --coverage",
         "typecheck": "tsc --noEmit",
         "lint": "eslint . --ext .ts --format=pretty",
@@ -69,6 +69,6 @@
         "format": "prettier --list-different ./**/*.{js,jsx,ts,tsx,json,md,yaml}",
         "format:fix": "prettier --write ./**/*.{js,jsx,ts,tsx,json,md,yaml}",
         "spelling": "cspell **/*.{js,jsx,ts,tsx,md,json}",
-        "clean": "rimraf coverage build tmp"
+        "clean": "rimraf coverage build tmp .yarn/cache"
     }
 }
